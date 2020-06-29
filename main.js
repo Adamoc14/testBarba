@@ -19,10 +19,10 @@ const scrollAnimation = () => {
 }
 
 const yoBro = () => {
-    const pages = [...document.querySelectorAll('.page')];
+    const facts = [...document.querySelectorAll('.fact')];
     // const container = document.querySelector(".container");
-    console.log(pages)
-    secondOne = gsap.to(pages, {
+    console.log(facts)
+    secondOne = gsap.to(facts, {
         background: "#ef4444",
         stagger: .3
     });

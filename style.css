@@ -36,7 +36,7 @@
 	background: #f7b33d;
 }
 
-.biggerContainer{
+.factsContainer{
     width: 300vw;
     height: 100vh;
     display: flex;
@@ -46,7 +46,7 @@
     justify-content: center;
 }
 
-.biggerContainer h2 {
+.factsContainer h2 {
     font-size: 1.8em;
     transform: scale(0);
     padding: 2em 0em;

@@ -45,7 +45,7 @@ if (typeof myAnim === "undefined") {
     scrollAnimation();
 } 
 
-if(typeof secondOne === "undefined") factsScrollAnimation
+if(typeof secondOne === "undefined") factsScrollAnimation()
 
 barba.init({
     sync: true,

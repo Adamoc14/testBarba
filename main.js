@@ -50,9 +50,9 @@ if (typeof myAnim === "undefined") {
     scrollAnimation();
 } 
 
-// if(typeof secondOne === "undefined") {
-//     factsScrollAnimation()
-// }
+if(typeof secondOne === "undefined") {
+    factsScrollAnimation()
+}
 
 barba.init({
     sync: true,
@@ -63,71 +63,60 @@ barba.init({
             await delay(1000);
             done();
         },
-        async enter() {
+        async afterEnter() {
             document.documentElement.scrollTop = 0;
-            // barba.on('newPageReady', ()=> {
-            //     factsScrollAnimation();
-            // })
-            // ScrollTrigger.refresh()
+            barba.on('newPageReady', ()=> {
+                factsScrollAnimation();
+            })
+            ScrollTrigger.refresh()
             setTimeout(scrollAnimation, 10);
-            // setTimeout(factsScrollAnimation, 20);
+            setTimeout(factsScrollAnimation, 20);
         },
     }],
 });
 
 barba.hooks.beforeOnce(()=> {
     console.log('Before The One Time')
-    factsScrollAnimation();
 })
 
 barba.hooks.once(()=>{
     console.log('One Time for the bois')
-    factsScrollAnimation();
 })
 
 barba.hooks.afterOnce(()=> {
     console.log('After The One Time')
-    factsScrollAnimation();
 })
 
 barba.hooks.before(()=>{
     console.log('Before it all kicks off ahhhh')
-    factsScrollAnimation();
 })
 
 barba.hooks.beforeLeave(()=> {
     console.log('Before Leaving')
-    factsScrollAnimation();
 })
 
 barba.hooks.leave(()=> {
     console.log('Leaving')
-    factsScrollAnimation();
 })
 
 barba.hooks.afterLeave(()=> {
     console.log('After Leaving Syanara')
-    factsScrollAnimation();
 })
 
 barba.hooks.beforeEnter(()=> {
     console.log('Before Entering')
-    factsScrollAnimation();
 })
 
 barba.hooks.enter(()=> {
     console.log('Entering Bois')
-    factsScrollAnimation();
 })
 
 barba.hooks.afterEnter(()=> {
     console.log('After Entering')
-    factsScrollAnimation();
 })
 
 barba.hooks.after(()=> {
     console.log('After everything , dust is settling now lol')
-    factsScrollAnimation();
 })
 
 

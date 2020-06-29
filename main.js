@@ -59,6 +59,7 @@ barba.init({
         async enter() {
             document.documentElement.scrollTop = 0;
             setTimeout(scrollAnimation, 10);
+            setTimeout(yoBro , 10)
         },
     }],
 });

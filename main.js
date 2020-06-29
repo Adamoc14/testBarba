@@ -19,7 +19,7 @@ const scrollAnimation = () => {
 }
 
 const factsScrollAnimation = (facts, container) => {
-    const facts = [...document.querySelectorAll('.fact')],
+    facts = [...document.querySelectorAll('.fact')],
     container = document.querySelector('.biggerContainer')
 
     console.log(facts , container)

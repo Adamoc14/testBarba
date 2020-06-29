@@ -66,7 +66,7 @@ barba.init({
             })
             ScrollTrigger.refresh()
             setTimeout(scrollAnimation, 10);
-            setTimeout(factsScrollAnimation, 10);
+            setTimeout(factsScrollAnimation, 20);
         },
     }],
 });

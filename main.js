@@ -2,7 +2,7 @@ let myAnim
 let secondOne
 const scrollAnimation = () => {
     const pages = [...document.querySelectorAll('.page')],
-    container = document.querySelector(".container");
+    container = document.querySelector(".container")
 
     myAnim = gsap.to(pages, {
         xPercent: -100 * (pages.length - 1),
@@ -20,8 +20,9 @@ const scrollAnimation = () => {
 
 const factsScrollAnimation = () => {
     const facts = [...document.querySelectorAll('.fact')],
-    container = document.querySelector('.biggerContainer');
+    container = document.querySelector('.biggerContainer')
 
+    console.log(facts , container)
     secondOne = gsap.to(facts, {
         xPercent: -100 * (facts.length - 1),
         ease: "none",

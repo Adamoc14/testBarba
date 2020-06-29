@@ -69,7 +69,7 @@ barba.init({
                 factsScrollAnimation();
             })
             ScrollTrigger.refresh()
-            setTimeout(scrollAnimation, 10);
+            scrollAnimation
             setTimeout(factsScrollAnimation, 20);
         },
     }],

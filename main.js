@@ -18,7 +18,7 @@ const scrollAnimation = () => {
     });
 }
 
-const factsScrollAnimation = () => {
+const factsScrollAnimation = (facts, container) => {
     const facts = [...document.querySelectorAll('.fact')],
     container = document.querySelector('.biggerContainer')
 
@@ -45,7 +45,9 @@ function delay(ms) {
 $(document).ready(()=> {
     console.log('The DOM is Ready')
     if(typeof secondOne === "undefined") {
-        factsScrollAnimation()
+        const facts = [...document.querySelectorAll('.fact')],
+        container = document.querySelector('.biggerContainer')
+        factsScrollAnimation(facts,container)
     }
 })
 
@@ -66,12 +68,14 @@ barba.init({
         },
         async afterEnter() {
             document.documentElement.scrollTop = 0;
-            barba.on('newPageReady', ()=> {
-                factsScrollAnimation();
-            })
-            ScrollTrigger.refresh()
+            // barba.on('newPageReady', ()=> {
+            //     factsScrollAnimation();
+            // })
+            // ScrollTrigger.refresh()
+            const facts = [...document.querySelectorAll('.fact')],
+            container = document.querySelector('.biggerContainer')
             scrollAnimation
-            setTimeout(factsScrollAnimation, 2000000);
+            setTimeout(factsScrollAnimation(facts,container ), 2000000);
         },
     }],
 });

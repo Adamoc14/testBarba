@@ -1,61 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
-    <script defer src="https://unpkg.com/@barba/core"></script>
-    <script defer src="main.js"></script>
+    
     <title>Document</title>
 </head>
 <body data-barba="wrapper">
-    <div class="container" data-barba="container" data-barba-namespace="about">
-        <div class="biggerContainer">
-            <h2>Few Facts about me</h2>
-            <div class="factsContainer_sm">
-                <div class="fact">
-                    <h3>3 words to describe me: </h3>
-                    <img src="https://source.unsplash.com/random" alt="">
-                    <h3>Creative , Adventourous , Hardworking</h3>
-                </div>
-                <div class="fact">
-                    <h3>Favourite Food</h3>
-                    <img src="https://source.unsplash.com/random" alt="">
-                    <h3>Tonnes of this stuff ^</h3>
-                </div>
-                <div class="fact">
-                    <h3>Favourite TV Series</h3>
-                    <img src="https://source.unsplash.com/random" alt="">
-                    <h3>Nine Nine 🤙</h3>
-                </div>
-                <div class="fact">
-                    <h3>Where are you most likely to be found</h3>
-                    <img src="https://source.unsplash.com/random" alt="">
-                    <h3>With my head in the fridge</h3>
-                </div>
-                <div class="fact">
-                    <h3>Favourite Music Artist</h3>
-                    <img src="https://source.unsplash.com/random" alt="">
-                    <h3>Kygo</h3>
-                </div>
-                <div class="fact">
-                    <h3>Favourite Sport</h3>
-                    <img src="https://source.unsplash.com/random" alt="">
-                    <h3>Swimming</h3>
-                </div>
-            </div>
+    <div data-barba="container" data-barba-namespace="index">
+        <div class="container">
+            <div class="page one">One</div>
+            <div class="page two">Two</div>
+            <div class="page three">Three</div>
         </div>
-    </div>
-    <div class="about_btn_container">
-        <a href="index.html">Home</a>
+        <div class="about_btn_container">
+            <a href="index.html">Index</a>
+        </div>
     </div>
     <footer>
         All Rights Reserved &copy; Adamoc 2020
     </footer>
-</body>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js"></script>
+    <script defer src="main.js"></script>
+</body>
 </html>

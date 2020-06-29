@@ -36,6 +36,22 @@
 	background: #f7b33d;
 }
 
+.about_btn_container{
+    display: flex;
+    width: 100vw;
+    background: #73A1AB;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.about_btn_container a{
+    padding: 1em 1em;
+    background:#AB8E68;
+    color:white;
+}
+
+
 footer {
 	background: #ef4444;
 }

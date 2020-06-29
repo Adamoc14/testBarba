@@ -61,6 +61,7 @@ barba.init({
         },
         async enter() {
             document.documentElement.scrollTop = 0;
+            scrollTrigger.refresh()
             setTimeout(scrollAnimation, 10);
             setTimeout(factsScrollAnimation, 10);
         },

@@ -1,21 +1,30 @@
+let myAnim;
 const scrollAnimation = () => {
-    let pages = [...document.querySelectorAll('.page')]
-    gsap.to(pages, {
+    const pages = [...document.querySelectorAll('.page')],
+    container = document.querySelector(".container");
+
+    myAnim = gsap.to(pages, {
         xPercent: -100 * (pages.length - 1),
         ease: "none",
         scrollTrigger: {
-            trigger: ".container",
+            trigger: container,
             pin: true,
-            markers: true,
             scrub: 1,
             snap: 1 / (pages.length - 1),
             // base vertical scrolling on how wide the container is so it feels more natural.
-            end: () => "+=" + document.querySelector(".container").offsetWidth
+            end: () => "+=" + container.offsetWidth
         }
     });
 }
 
-scrollAnimation()
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+if (typeof myAnim === "undefined") {
+    scrollAnimation();
+}
+
 barba.init({
     sync: true,
     transitions: [{
@@ -26,17 +35,8 @@ barba.init({
             done();
         },
         async enter() {
-            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            setTimeout(scrollAnimation, 10);
         },
     }],
-    views: [
-        {
-            namespace: 'about',
-            beforeEnter(data) {
-            },
-            afterEnter() {
-                scrollAnimation();
-            },
-        }
-    ],
 });

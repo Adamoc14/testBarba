@@ -1,5 +1,9 @@
 let myAnim
 let secondOne
+
+facts = [...document.querySelectorAll('.fact')]
+container = document.querySelector('.biggerContainer')
+
 const scrollAnimation = () => {
     const pages = [...document.querySelectorAll('.page')],
     container = document.querySelector(".container")
@@ -45,7 +49,7 @@ function delay(ms) {
 $(document).ready(()=> {
     console.log('The DOM is Ready')
     if(typeof secondOne === "undefined") {
-        const facts = [...document.querySelectorAll('.fact')],
+        facts = [...document.querySelectorAll('.fact')],
         container = document.querySelector('.biggerContainer')
         factsScrollAnimation(facts,container)
     }
@@ -72,10 +76,10 @@ barba.init({
             //     factsScrollAnimation();
             // })
             // ScrollTrigger.refresh()
-            const facts = [...document.querySelectorAll('.fact')],
+            facts = [...document.querySelectorAll('.fact')],
             container = document.querySelector('.biggerContainer')
             scrollAnimation
-            setTimeout(factsScrollAnimation(facts,container ), 2000000);
+            setTimeout(factsScrollAnimation(facts,container ), 20000);
         },
     }],
 });

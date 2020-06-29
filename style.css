@@ -53,5 +53,9 @@
 
 
 footer {
-	background: #ef4444;
+    background: #ef4444;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

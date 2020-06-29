@@ -1,5 +1,5 @@
-let myAnim 
-secondOne;
+let myAnim,
+secondOne
 const scrollAnimation = () => {
     const pages = [...document.querySelectorAll('.page')],
     container = document.querySelector(".container");

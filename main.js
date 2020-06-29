@@ -18,37 +18,41 @@ const scrollAnimation = () => {
     });
 }
 
-const factsScrollAnimation = () => {
-    const facts = [...document.querySelectorAll('.fact')],
-    container = document.querySelector('.biggerContainer')
+// const factsScrollAnimation = () => {
+//     const facts = [...document.querySelectorAll('.fact')],
+//     container = document.querySelector('.biggerContainer')
 
-    console.log(facts , container)
-    secondOne = gsap.to(facts, {
-        xPercent: -100 * (facts.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: container,
-            pin: true,
-            scrub: 1,
-            snap: 1 / (facts.length - 1),
-            // base vertical scrolling on how wide the container is so it feels more natural.
-            end: () => "+=" + container.offsetWidth
-        }
-    });
+//     console.log(facts , container)
+//     secondOne = gsap.to(facts, {
+//         xPercent: -100 * (facts.length - 1),
+//         ease: "none",
+//         scrollTrigger: {
+//             trigger: container,
+//             pin: true,
+//             scrub: 1,
+//             snap: 1 / (facts.length - 1),
+//             // base vertical scrolling on how wide the container is so it feels more natural.
+//             end: () => "+=" + container.offsetWidth
+//         }
+//     });
 
-}
+// }
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+$(document).ready(()=> {
+    console.log('The DOM is Ready')
+})
+
 if (typeof myAnim === "undefined") {
     scrollAnimation();
 } 
 
-if(typeof secondOne === "undefined") {
-    factsScrollAnimation()
-}
+// if(typeof secondOne === "undefined") {
+//     factsScrollAnimation()
+// }
 
 barba.init({
     sync: true,
@@ -61,12 +65,63 @@ barba.init({
         },
         async enter() {
             document.documentElement.scrollTop = 0;
-            barba.on('newPageReady', ()=> {
-                factsScrollAnimation();
-            })
-            ScrollTrigger.refresh()
+            // barba.on('newPageReady', ()=> {
+            //     factsScrollAnimation();
+            // })
+            // ScrollTrigger.refresh()
             setTimeout(scrollAnimation, 10);
-            setTimeout(factsScrollAnimation, 20);
+            // setTimeout(factsScrollAnimation, 20);
         },
     }],
 });
+
+barba.hooks.beforeOnce(()=> {
+    console.log('Before The One Time')
+})
+
+barba.hooks.once(()=>{
+    console.log('One Time for the bois')
+})
+
+barba.hooks.afterOnce(()=> {
+    console.log('After The One Time')
+})
+
+barba.hooks.before(()=>{
+    console.log('Before it all kicks off ahhhh')
+})
+
+barba.hooks.beforeLeave(()=> {
+    console.log('Before Leaving')
+})
+
+barba.hooks.leave(()=> {
+    console.log('Leaving')
+})
+
+barba.hooks.afterLeave(()=> {
+    console.log('After Leaving Syanara')
+})
+
+barba.hooks.beforeEnter(()=> {
+    console.log('Before Entering')
+})
+
+barba.hooks.enter(()=> {
+    console.log('Entering Bois')
+})
+
+barba.hooks.afterEnter(()=> {
+    console.log('After Entering')
+})
+
+barba.hooks.after(()=> {
+    console.log('After everything , dust is settling now lol')
+})
+
+
+
+
+
+
+

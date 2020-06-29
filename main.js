@@ -44,15 +44,16 @@ function delay(ms) {
 
 $(document).ready(()=> {
     console.log('The DOM is Ready')
+    if(typeof secondOne === "undefined") {
+        factsScrollAnimation()
+    }
 })
 
 if (typeof myAnim === "undefined") {
     scrollAnimation();
 } 
 
-if(typeof secondOne === "undefined") {
-    factsScrollAnimation()
-}
+
 
 barba.init({
     sync: true,
@@ -70,7 +71,7 @@ barba.init({
             })
             ScrollTrigger.refresh()
             scrollAnimation
-            setTimeout(factsScrollAnimation, 20);
+            setTimeout(factsScrollAnimation, 2000000);
         },
     }],
 });

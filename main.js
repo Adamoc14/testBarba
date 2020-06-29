@@ -20,11 +20,19 @@ const scrollAnimation = () => {
 
 const yoBro = () => {
     const facts = [...document.querySelectorAll('.fact')];
-    // const container = document.querySelector(".container");
     console.log(facts)
+
     secondOne = gsap.to(facts, {
-        background: "#ef4444",
-        stagger: .3
+        xPercent: -115 * (facts.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".factsContainer",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (facts.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end:  `+=4320`
+        }
     });
 }
 

@@ -1,5 +1,5 @@
-let myAnim,
-secondOne
+let myAnim
+let secondOne
 const scrollAnimation = () => {
     const pages = [...document.querySelectorAll('.page')],
     container = document.querySelector(".container");
@@ -45,9 +45,9 @@ if (typeof myAnim === "undefined") {
     scrollAnimation();
 } 
 
-if(typeof secondOne === "undefined") 
+if(typeof secondOne === "undefined") {
     factsScrollAnimation()
-
+}
 
 barba.init({
     sync: true,

@@ -38,9 +38,12 @@
 
 .biggerContainer{
     width: 300vw;
-	height: 100vh;
-	display: flex;
-	flex-wrap: nowrap; 
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background: #F0C368;
+    justify-content: center;
 }
 
 .biggerContainer h2 {

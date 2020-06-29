@@ -36,6 +36,45 @@
 	background: #f7b33d;
 }
 
+.biggerContainer{
+    width: 300vw;
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap; 
+}
+
+.biggerContainer h2 {
+    font-size: 1.8em;
+    transform: scale(0);
+    padding: 2em 0em;
+    /* margin-bottom: 5vh; */
+	color: #F0C368;
+}
+
+.factsContainer_sm {
+	display: flex;
+	justify-content: space-around;
+    width: 300vw;
+}
+
+.fact {
+    display: flex;
+    flex-direction: column;
+	height: 40vh;
+	width: 30vw;
+    /* flex: 1; */
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    color: #F0C368;
+}
+
+.fact img {
+    width: 25vw;
+    height: 25vh;
+    margin: 1em;
+}
+
 .about_btn_container{
     display: flex;
     width: 100vw;

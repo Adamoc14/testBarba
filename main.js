@@ -43,8 +43,8 @@ function delay(ms) {
 if (typeof myAnim === "undefined" && [...document.querySelectorAll('.page')] !== []) {
     scrollAnimation();
 }
-if(typeof secondOne === "undefined") 
-    yoBro()
+// if(typeof secondOne === "undefined") 
+//     yoBro()
 
 barba.init({
     sync: true,
@@ -64,8 +64,8 @@ barba.init({
     views: [
         {
             namespace: 'about',
-            enter() {
-                // setTimeout(yoBro , 10) 
+            afterEnter() {
+                setTimeout(yoBro , 10) 
             },
         }
     ],

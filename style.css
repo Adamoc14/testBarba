@@ -41,6 +41,13 @@ body{
 	background: #f7b33d;
 }
 
+.about_top_section{
+    width: 100vh;
+    height: 100vh;
+    background: #F0C368;
+    padding: 2em 0em;
+}
+
 .factsContainer{
     width: 300vw;
     height: 100vh;
@@ -89,7 +96,7 @@ body{
     background: #73A1AB;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 120vh;
 }
 
 .about_btn_container a {

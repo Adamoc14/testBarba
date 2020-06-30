@@ -26,18 +26,25 @@ const aboutInit = () => {
     console.log('We have lift off ')
     const allClasses = [...document.querySelectorAll('[class]')]
     console.log(allClasses.length)
+    let gsapArray = []
     // allClasses.map(classes => console.log(classes.className.split(' ')))
-    // .some(c => /gsap-.*/.test(c))
-    // console.log(allClasses , allClasses.length)
+    for (var i = 0; i < allClasses.length; i++) {
+        if (/gsap-/.test(allClasses[i].className)) {
+            gsapArray.push(allClasses[i].className);
+        }
+    }
+    gsapArray.map(tag => document.querySelector(`.${tag}`).remove())
     myAnim = undefined
     if(typeof myAnim === "undefined") {
-        // setTimeout(scroll_facts_tl_func , 10)
         horizontalScrollAnim();
     }
-    // gsap.to(face , {
-    //     attr: { viewBox: face_viewBox },
-    //     duration: 3
-    // })
+    gsapArray = []
+    for (var i = 0; i < allClasses.length; i++) {
+        if (/gsap-/.test(allClasses[i].className)) {
+            gsapArray.push(allClasses[i].className);
+        }
+    }
+    gsapArray.map(tag => document.querySelector(`.${tag}`).remove())
 }
 
 const horizontalScrollAnim = () => {

@@ -44,7 +44,7 @@ if (typeof myAnim === "undefined" && [...document.querySelectorAll('.page')] !==
     scrollAnimation();
 }
 if(typeof secondOne === "undefined") 
-    setTimeout(yoBro , 20)
+    setTimeout(yoBro , 10)
 
 barba.init({
     sync: true,

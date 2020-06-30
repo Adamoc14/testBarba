@@ -40,7 +40,7 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-if (typeof myAnim === "undefined") {
+if (typeof myAnim === "undefined" && [...document.querySelectorAll('.page')] !== []) {
     scrollAnimation();
 }
 if(typeof secondOne === "undefined") 
@@ -58,7 +58,15 @@ barba.init({
         async enter() {
             document.documentElement.scrollTop = 0;
             setTimeout(scrollAnimation, 10);
-            setTimeout(yoBro , 10)
+            // setTimeout(yoBro , 10)
         },
     }],
+    views: [
+        {
+            namespace: 'about',
+            enter() {
+                setTimeout(yoBro , 10) 
+            },
+        }
+    ],
 });

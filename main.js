@@ -2,7 +2,7 @@ let myAnim , secondOne
 const scrollAnimation = () => {
     const pages = [...document.querySelectorAll('.page')];
     const container = document.querySelector(".container");
-
+    if (pages || container === null) return 
     console.log(container, pages)
     myAnim = gsap.to(pages, {
         xPercent: -100 * (pages.length - 1),

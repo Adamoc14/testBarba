@@ -38,13 +38,7 @@ const aboutInit = () => {
     if(typeof myAnim === "undefined") {
         horizontalScrollAnim();
     }
-    gsapArray = []
-    for (var i = 0; i < allClasses.length; i++) {
-        if (/gsap-/.test(allClasses[i].className)) {
-            gsapArray.push(allClasses[i].className);
-        }
-    }
-    gsapArray.map(tag => document.querySelector(`.${tag}`).remove())
+    window.dispatchEvent(new Event('resize'));
 }
 
 const horizontalScrollAnim = () => {
